@@ -4,6 +4,7 @@
  */
 
 import { env } from '@/config/env'
+import { buildQueryParams } from './common'
 import type {
   PrefecturesResponse,
   PopulationResponse,
@@ -61,12 +62,7 @@ export class YumemiApi {
    * @param params
    */
   static async getPopulation(params: PopulationQueryParams): Promise<PopulationResponse> {
-    const queryParams = new URLSearchParams()
-    Object.entries(params).forEach(([key, value]) => {
-      if (value !== undefined && value !== null) {
-        queryParams.append(key, String(value))
-      }
-    })
+    const queryParams = buildQueryParams(params)
     const response = await fetch(
       `${YUMEMI_API_ENDPOINTS.POPULATION.path}?${queryParams.toString()}`,
       {
