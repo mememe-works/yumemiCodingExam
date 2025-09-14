@@ -4,7 +4,7 @@
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
 import { YumemiApi } from '../yumemi-api'
-import type { PrefecturesResponse, PopulationResponse } from '@/types/api/yumemi-api'
+import type { PrefecturesResponse, PopulationResponse } from '@/services/api/types/yumemi-api'
 
 // 環境変数をモック
 vi.mock('@/config/env', () => ({
