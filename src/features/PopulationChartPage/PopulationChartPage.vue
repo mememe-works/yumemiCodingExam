@@ -55,7 +55,6 @@ const loadPopulationData = async (prefCode: number) => {
     selectedPrefecturesCodes.value = selectedPrefecturesCodes.value.filter(
       (code) => code !== prefCode,
     )
-    // TODO:  XX県のデータの取得に失敗しました
   } finally {
     populationLoadingStates.value[prefCode] = false
   }
