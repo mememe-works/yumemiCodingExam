@@ -8,7 +8,7 @@ import PopulationChartPage from '../../features/PopulationChartPage/PopulationCh
   </main>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 main {
   flex-basis: 100%;
 }

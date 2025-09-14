@@ -42,7 +42,7 @@ const handlePrefectureChange = (prefCode: number, event: Event) => {
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .prefecture-list {
   margin-bottom: 2rem;
 }

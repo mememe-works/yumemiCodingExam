@@ -263,7 +263,7 @@ onMounted(() => {
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .population-graph {
   margin-top: 2rem;
 }

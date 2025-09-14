@@ -9,4 +9,4 @@ import LayoutFooter from './components/layout/LayoutFooter.vue'
   <LayoutMain />
   <LayoutFooter />
 </template>
-<style scoped></style>
+<style lang="scss" scoped></style>

@@ -84,7 +84,7 @@ onMounted(() => {
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .population-chart-page {
   max-width: 1200px;
   margin: 0 auto;
