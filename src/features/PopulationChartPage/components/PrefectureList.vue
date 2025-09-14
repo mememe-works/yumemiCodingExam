@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { defineProps, defineEmits } from 'vue'
 import type { Prefecture } from '@/services/api/types/yumemi-api'
 
 interface Props {
@@ -13,7 +12,7 @@ interface Emits {
   (e: 'prefecture-change', prefCode: number, event: Event): void
 }
 
-defineProps<Props>()
+const props = defineProps<Props>()
 const emit = defineEmits<Emits>()
 
 const handlePrefectureChange = (prefCode: number, event: Event) => {
@@ -25,15 +24,15 @@ const handlePrefectureChange = (prefCode: number, event: Event) => {
   <div class="prefecture-list">
     <h2>都道府県一覧</h2>
 
-    <div v-if="loading" class="loading">読み込み中...</div>
-    <div v-else-if="error" class="error">エラー: {{ error }}</div>
+    <div v-if="props.loading" class="loading">読み込み中...</div>
+    <div v-else-if="props.error" class="error">エラー: {{ props.error }}</div>
     <div v-else class="prefectures">
       <div v-for="prefecture in prefectures" :key="prefecture.prefCode" class="prefecture-item">
         <label class="prefecture-checkbox">
           <input
             type="checkbox"
             :value="prefecture.prefCode"
-            :checked="selectedPrefectures.includes(prefecture.prefCode)"
+            :checked="props.selectedPrefectures.includes(prefecture.prefCode)"
             @change="handlePrefectureChange(prefecture.prefCode, $event)"
           />
           {{ prefecture.prefName }}
