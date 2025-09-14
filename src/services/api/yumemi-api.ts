@@ -9,7 +9,7 @@ import type {
   PrefecturesResponse,
   PopulationResponse,
   PopulationQueryParams,
-} from '@/types/api/yumemi-api'
+} from '@/services/api/types/yumemi-api'
 
 // ============================================================================
 // エンドポイント定義
