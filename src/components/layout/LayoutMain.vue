@@ -1,8 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import PopulationChartPage from '../../features/PopulationChartPage/PopulationChartPage.vue'
+</script>
 
 <template>
   <main>
-    <!-- TODO -->
+    <PopulationChartPage />
   </main>
 </template>
 
