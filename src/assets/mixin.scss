@@ -1,0 +1,19 @@
+@use '@/assets/values.scss' as v;
+
+@mixin headline_style() {
+  margin: 0;
+  font-size: v.$FONT_SIZE_LARGE;
+  font-weight: 700;
+  color: v.$COLOR_TEXT_SOFT;
+  @media (min-width: v.$MEDIA_MIN_WIDTH_TABLET) {
+    margin: v.$SPACER * 2 0;
+    font-size: v.$FONT_SIZE_LARGE;
+  }
+}
+@mixin text_description_style() {
+  font-size: v.$FONT_SIZE_SMALL;
+  color: v.$COLOR_TEXT_SOFT;
+  @media (min-width: v.$MEDIA_MIN_WIDTH_TABLET) {
+    font-size: v.$FONT_SIZE_MEDIUM;
+  }
+}

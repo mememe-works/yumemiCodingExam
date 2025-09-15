@@ -1,0 +1,67 @@
+@use '@/assets/values.scss' as v;
+@use '@/assets/reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Maru+Gothic:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+html {
+  width: 100vw;
+  height: 100vh;
+  scrollbar-width: none;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vw;
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-family:
+    'Noto Sans JP',
+    'Zen Maru Gothic',
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: v.$FONT_SIZE_MEDIUM;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: v.$COLOR_BACKGROUND;
+  color: v.$COLOR_TEXT;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  min-height: fit-content;
+
+  // common style
+  .common-text-error {
+    color: v.$COLOR_ERROR_TEXT;
+  }
+  .common-text-note {
+    font-size: v.$FONT_SIZE_SMALL;
+    color: v.$COLOR_TEXT_SOFT;
+  }
+}
