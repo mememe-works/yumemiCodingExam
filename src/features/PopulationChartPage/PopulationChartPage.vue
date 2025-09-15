@@ -67,14 +67,15 @@ onMounted(() => {
 
 <template>
   <div class="population-chart-page">
-    <PrefectureList
-      :prefectures="prefectures"
-      :selected-prefectures="selectedPrefecturesCodes"
-      :loading="prefecturesLoading"
-      :error="prefecturesError"
-      @prefecture-change="handlePrefectureChange"
-    />
-
+    <div class="population-chart-page-list-wrapper">
+      <PrefectureList
+        :prefectures="prefectures"
+        :selected-prefectures="selectedPrefecturesCodes"
+        :loading="prefecturesLoading"
+        :error="prefecturesError"
+        @prefecture-change="handlePrefectureChange"
+      />
+    </div>
     <PrefectureGraph
       :selected-prefectures="selectedPrefecturesCodes"
       :prefectures="prefectures"
@@ -84,10 +85,25 @@ onMounted(() => {
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use '@/assets/values.scss' as v;
+
 .population-chart-page {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
+  max-width: v.$CONTENTS_MAX_WIDTH;
+  margin: auto;
+  padding: v.$SPACER;
+  @media (min-width: v.$MEDIA_MIN_WIDTH_TABLET) {
+    padding: v.$SPACER * 2 v.$SPACER * 4;
+  }
+
+  .population-chart-page-list-wrapper {
+    border: 1px solid v.$COLOR_BORDER;
+    padding: v.$SPACER * 2;
+    border-radius: v.$BORDER_RADIUS;
+    background: v.$COLOR_BACKGROUND_ACCENT;
+    @media (min-width: v.$MEDIA_MIN_WIDTH_TABLET) {
+      padding: v.$SPACER * 2 v.$SPACER * 4;
+    }
+  }
 }
 </style>

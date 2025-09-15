@@ -1,0 +1,20 @@
+@forward '@/assets/theme-color.scss';
+@use '@/assets/theme-color.scss' as v;
+
+// media query
+$MEDIA_MIN_WIDTH_TABLET: 600px;
+$MEDIA_MIN_WIDTH_DESKTOP: 1025px;
+$CONTENTS_MAX_WIDTH: 1200px;
+
+// typography
+$FONT_SIZE_SMALL: 12px;
+$FONT_SIZE_MEDIUM: 16px;
+$FONT_SIZE_LARGE: 24px;
+$FONT_SIZE_XLARGE: 32px;
+
+// base design value
+$SPACER: 4px;
+$BORDER_RADIUS: 8px;
+$BOX_SHADOW: 0 0 4px 0 v.$COLOR_STONE_800;
+$TRANSITION_TIME: 0.3s;
+$MIN_CLICKABLE_SIZE: 40px;
