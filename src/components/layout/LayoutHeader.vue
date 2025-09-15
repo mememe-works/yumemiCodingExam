@@ -7,9 +7,13 @@
 </template>
 
 <style lang="scss" scoped>
-@use '../../assets/values.scss' as v;
+@use '@/assets/values.scss' as v;
 
 header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
   display: flex;
   flex-shrink: 0;
   padding: v.$SPACER v.$SPACER * 2;

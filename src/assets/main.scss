@@ -1,7 +1,7 @@
-@use './values.scss' as v;
-
-@use './reset.css';
+@use '@/assets/values.scss' as v;
+@use '@/assets/reset.css';
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Maru+Gothic:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 html {
   width: 100vw;
@@ -55,4 +55,13 @@ body {
   height: 100vh;
   width: 100vw;
   min-height: fit-content;
+
+  // common style
+  .common-text-error {
+    color: v.$COLOR_ERROR_TEXT;
+  }
+  .common-text-note {
+    font-size: v.$FONT_SIZE_SMALL;
+    color: v.$COLOR_TEXT_SOFT;
+  }
 }

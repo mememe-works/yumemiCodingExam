@@ -7,7 +7,7 @@
 </template>
 
 <style lang="scss" scoped>
-@use '../../assets/values.scss' as v;
+@use '@/assets/values.scss' as v;
 
 footer {
   padding: v.$SPACER v.$SPACER * 2;
