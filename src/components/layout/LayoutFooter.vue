@@ -7,17 +7,17 @@
 </template>
 
 <style lang="scss" scoped>
-@import '../../assets/values.scss';
+@use '../../assets/values.scss' as v;
 
 footer {
-  padding: $SPACER $SPACER * 2;
+  padding: v.$SPACER v.$SPACER * 2;
   flex-shrink: 0;
-  background-color: $COLOR_BACKGROUND_MUTED;
+  background-color: v.$COLOR_BACKGROUND_MUTED;
   text-align: center;
   font-family: 'Zen Maru Gothic';
-  font-size: $FONT_SIZE_SMALL;
-  @media (min-width: $MEDIA_MIN_WIDTH_TABLET) {
-    padding: $SPACER * 2 $SPACER * 4;
+  font-size: v.$FONT_SIZE_SMALL;
+  @media (min-width: v.$MEDIA_MIN_WIDTH_TABLET) {
+    padding: v.$SPACER * 2 v.$SPACER * 4;
   }
 }
 </style>

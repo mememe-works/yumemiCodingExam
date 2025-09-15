@@ -1,4 +1,5 @@
-@import './theme-color.scss';
+@forward './theme-color.scss';
+@use './theme-color.scss' as v;
 
 // media query
 $MEDIA_MIN_WIDTH_TABLET: 600px;
@@ -13,4 +14,4 @@ $FONT_SIZE_XLARGE: 32px;
 // base design value
 $SPACER: 4px;
 $BORDER_RADIUS: 8px;
-$BOX_SHADOW: 0 0 4px 0 $COLOR_STONE_800;
+$BOX_SHADOW: 0 0 4px 0 v.$COLOR_STONE_800;

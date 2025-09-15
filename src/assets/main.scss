@@ -1,6 +1,6 @@
-@import './reset.css';
-@import './values.scss';
+@use './values.scss' as v;
 
+@use './reset.css';
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Maru+Gothic:wght@400;700&display=swap');
 
 html {
@@ -32,13 +32,13 @@ body {
     'Droid Sans',
     'Helvetica Neue',
     sans-serif;
-  font-size: $FONT_SIZE_MEDIUM;
+  font-size: v.$FONT_SIZE_MEDIUM;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-color: $COLOR_BACKGROUND;
-  color: $COLOR_TEXT;
+  background-color: v.$COLOR_BACKGROUND;
+  color: v.$COLOR_TEXT;
 }
 
 *,

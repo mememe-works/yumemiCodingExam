@@ -7,21 +7,21 @@
 </template>
 
 <style lang="scss" scoped>
-@import '../../assets/values.scss';
+@use '../../assets/values.scss' as v;
 
 header {
   display: flex;
   flex-shrink: 0;
-  padding: $SPACER $SPACER * 2;
-  background-color: $COLOR_PRIMARY_BACKGROUND;
+  padding: v.$SPACER v.$SPACER * 2;
+  background-color: v.$COLOR_PRIMARY_BACKGROUND;
 
-  @media (min-width: $MEDIA_MIN_WIDTH_TABLET) {
-    padding: $SPACER * 2 $SPACER * 4;
+  @media (min-width: v.$MEDIA_MIN_WIDTH_TABLET) {
+    padding: v.$SPACER * 2 v.$SPACER * 4;
   }
 
   .header-title {
-    color: $COLOR_PRIMARY_TEXT;
-    font-size: $FONT_SIZE_SMALL;
+    color: v.$COLOR_PRIMARY_TEXT;
+    font-size: v.$FONT_SIZE_SMALL;
   }
 }
 </style>
